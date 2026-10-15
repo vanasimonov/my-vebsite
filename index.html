@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚡ qwsturs store — Цифровые разработки и софт</title>
+  <meta name="description" content="Магазин и каталог цифровых решений qwsturs store от qwstur. Приватный софт и бесплатные утилиты.">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet (Linear / Vercel Minimalist Theme + Scroll Animations) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-[#ededed] min-h-screen">
+
+  <!-- Subtle Linear Grid & Top Beam -->
+  <div class="linear-grid"></div>
+  <div class="ambient-beam"></div>
+
+  <!-- Content Container -->
+  <div class="relative z-10 flex flex-col min-h-screen">
+
+    <!-- Minimal Header -->
+    <header class="border-b border-white/[0.08] bg-black/80 backdrop-blur-md sticky top-0 z-40 animate-enter-fade">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2.5 group">
+          <div class="w-8 h-8 rounded-lg bg-white/[0.06] border border-white/[0.1] flex items-center justify-center font-mono text-sm font-semibold text-white group-hover:border-purple-500/50 transition-colors">
+            ⚡
+          </div>
+          <span class="text-sm font-semibold tracking-tight text-white flex items-center gap-1.5">
+            qwsturs store
+          </span>
+          <span class="text-[11px] font-mono text-neutral-500 hidden sm:inline">by qwstur</span>
+        </a>
+
+        <!-- System Status -->
+        <div class="flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] text-[11px] font-mono text-neutral-400">
+          <div class="status-dot"></div>
+          <span>operational</span>
+        </div>
+
+        <!-- Telegram Action -->
+        <div class="flex items-center gap-2">
+          <button onclick="window.copyContact()" title="Скопировать ник Telegram"
+            class="hidden sm:flex btn-vercel-secondary h-8 px-2.5 rounded-md text-xs font-mono items-center gap-1.5">
+            <span class="text-xs">✈️</span>
+            <span>@AimBoGAttack</span>
+          </button>
+
+          <a href="https://t.me/AimBoGAttack" target="_blank" rel="noopener noreferrer"
+            class="btn-vercel-tg h-8 px-3 rounded-md text-xs font-medium flex items-center gap-1.5">
+            <span class="text-xs">✈️</span>
+            <span>Telegram</span>
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-16 pb-10 px-4 sm:px-6 max-w-4xl mx-auto w-full text-center">
+      
+      <!-- Micro Badge -->
+      <div class="scroll-reveal inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-neutral-400 text-xs font-mono mb-6">
+        <span>✨</span>
+        <span>qwsturs store // v2.0 official</span>
+      </div>
+
+      <!-- Main Headline with Typewriter -->
+      <h1 class="scroll-reveal delay-100 text-3xl sm:text-5xl font-semibold tracking-tight text-white mb-4">
+        Разработка софта и <br class="hidden sm:block" />
+        <span class="text-neutral-300">
+          <span id="typewriter-text"></span><span class="typewriter-cursor"></span>
+        </span>
+      </h1>
+
+      <p class="scroll-reveal delay-200 text-neutral-400 text-sm sm:text-base max-w-xl mx-auto mb-8 font-light leading-relaxed">
+        Индивидуальная разработка под заказ и бесплатные программы. Без посредников — прямой контакт с разработчиком в Telegram.
+      </p>
+
+      <!-- Quick Action Buttons -->
+      <div class="scroll-reveal delay-300 flex flex-wrap items-center justify-center gap-3 mb-12">
+        <a href="https://t.me/AimBoGAttack" target="_blank" rel="noopener noreferrer"
+          class="btn-vercel-primary px-5 py-2.5 text-xs font-medium flex items-center gap-2">
+          <span>✈️</span>
+          <span>Написать в Telegram</span>
+        </a>
+        <button onclick="window.copyContact()"
+          class="btn-vercel-secondary px-4 py-2.5 text-xs font-medium flex items-center gap-2">
+          <span>📋</span>
+          <span>Скопировать @AimBoGAttack</span>
+        </button>
+      </div>
+
+      <!-- Search & Filters Container -->
+      <div class="scroll-reveal delay-400 max-w-2xl mx-auto">
+        <!-- Search Input -->
+        <div class="relative mb-4">
+          <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-500">
+            <i data-lucide="search" class="w-4 h-4"></i>
+          </div>
+          <input 
+            type="text" 
+            id="search-input"
+            placeholder="🔍 Поиск по программам и скриптам... (Нажми '/' для фокуса)"
+            class="w-full pl-10 pr-10 py-2.5 rounded-lg bg-white/[0.03] border border-white/[0.08] text-white placeholder-neutral-500 focus:outline-none focus:border-white/25 text-xs font-mono transition-all"
+          />
+          <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+            <kbd class="px-1.5 py-0.5 text-[10px] font-mono bg-white/[0.06] text-neutral-400 rounded border border-white/[0.08]">/</kbd>
+          </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-1.5">
+          <button data-category="all" class="minimal-tab active">🔥 Все релизы</button>
+          <button data-category="gaming" class="minimal-tab">🎮 Для геймеров</button>
+          <button data-category="tools" class="minimal-tab">🛠️ Утилиты</button>
+          <button data-category="free" class="minimal-tab">🎁 Бесплатный софт</button>
+          <button data-category="scripts" class="minimal-tab">⚡ Скрипты</button>
+          <button data-category="private" class="minimal-tab">💎 Приватный софт</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 py-6 w-full">
+      
+      <!-- Dynamic Products Grid -->
+      <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Rendered via JavaScript with scroll-reveal -->
+      </div>
+
+      <!-- Linear Style Empty State (Hidden when items exist) -->
+      <div id="empty-state" class="hidden spotlight-card scroll-reveal p-8 sm:p-12 text-center max-w-lg mx-auto my-6 border border-white/[0.08]">
+        <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-xl">
+          📦
+        </div>
+        <div class="text-[11px] font-mono text-neutral-500 uppercase tracking-wider mb-1">// STATUS: PREPARING DROPS ⏳</div>
+        <h3 id="empty-title" class="text-base font-medium text-white mb-2">Каталог обновляется</h3>
+        <p id="empty-desc" class="text-xs text-neutral-400 max-w-sm mx-auto mb-6 leading-relaxed">
+          Здесь пока нет товаров. Когда ты добавишь новые программы или софт, они сразу появятся в этой сетке.
+        </p>
+        <div class="flex items-center justify-center gap-3">
+          <a href="https://t.me/AimBoGAttack" target="_blank" rel="noopener noreferrer"
+            class="btn-vercel-tg px-4 py-2 text-xs flex items-center gap-1.5">
+            <span>✈️</span>
+            <span>Написать в Telegram</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll-Reveal Features Section -->
+      <section class="mt-14 pt-8 border-t border-white/[0.08]">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          
+          <div class="spotlight-card scroll-reveal delay-100 p-5">
+            <div class="text-lg mb-2">🚀</div>
+            <h4 class="text-xs font-mono font-semibold text-white mb-1 uppercase tracking-wide">Быстрый отклик</h4>
+            <p class="text-xs text-neutral-400 leading-relaxed font-light">
+              Прямой контакт в Telegram с создателем. Моментальные ответы и помощь с запуском.
+            </p>
+          </div>
+
+          <div class="spotlight-card scroll-reveal delay-200 p-5">
+            <div class="text-lg mb-2">🛡️</div>
+            <h4 class="text-xs font-mono font-semibold text-white mb-1 uppercase tracking-wide">Чистый код</h4>
+            <p class="text-xs text-neutral-400 leading-relaxed font-light">
+              Все бесплатные программы проверены и безопасны, без скрытых майнеров или рекламы.
+            </p>
+          </div>
+
+          <div class="spotlight-card scroll-reveal delay-300 p-5">
+            <div class="text-lg mb-2">💎</div>
+            <h4 class="text-xs font-mono font-semibold text-white mb-1 uppercase tracking-wide">Приватный заказ</h4>
+            <p class="text-xs text-neutral-400 leading-relaxed font-light">
+              Разработка ботов, читов, чекеров и утилит под твои индивидуальные задачи.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/[0.08] py-8 mt-auto bg-black scroll-reveal">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-neutral-500">
+        <div class="flex items-center gap-1.5">
+          <span>&copy; 2026 qwsturs store. Разработчик:</span>
+          <a href="https://t.me/AimBoGAttack" target="_blank" class="text-neutral-300 hover:underline">qwstur ⚡</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="https://t.me/AimBoGAttack" target="_blank" class="hover:text-neutral-300 transition-colors flex items-center gap-1">
+            <span>✈️</span>
+            <span>Telegram (@AimBoGAttack)</span>
+          </a>
+          <span>•</span>
+          <span class="text-emerald-400">● 100% online</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Detail Modal -->
+  <div id="product-modal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="modal-content bg-[#0d0d0d] border border-white/[0.1] w-full max-w-md rounded-xl p-6 relative shadow-2xl">
+      <button id="modal-close-btn" class="absolute top-4 right-4 text-neutral-400 hover:text-white p-1 rounded hover:bg-white/[0.06] transition-colors">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Minimal Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-200 pointer-events-none">
+    <div class="bg-[#111111] px-3.5 py-2 rounded-lg border border-white/[0.1] shadow-xl flex items-center gap-2">
+      <span class="text-xs">✈️</span>
+      <span id="toast-message" class="text-xs font-mono text-neutral-200">Уведомление</span>
+    </div>
+  </div>
+
+  <!-- Floating Telegram Contact Button in Bottom Right -->
+  <a href="https://t.me/AimBoGAttack" target="_blank" rel="noopener noreferrer" title="Написать qwstur в Telegram"
+    class="fixed bottom-6 right-6 z-40 btn-vercel-tg w-11 h-11 rounded-full flex items-center justify-center shadow-2xl border border-sky-400/40 hover:scale-105 transition-transform">
+    <span class="text-base">✈️</span>
+  </a>
+
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
